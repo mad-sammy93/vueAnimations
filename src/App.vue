@@ -59,14 +59,29 @@ button:active {
   border-color: #a80b48;
 }
 .animate {
-  transform: translateX(-150px);
+  /* transform: translateX(-150px); */
+  animation: slide-fade 500ms ease-out forwards;
+}
+@keyframes slide-fade {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+
+  70% {
+    transform: translateX(-120px) scale(1.1);
+  }
+
+  100% {
+    transform: translateX(0-150px) scale(1);
+  }
 }
 .block {
   width: 8rem;
   height: 8rem;
   background-color: #290033;
   margin-bottom: 2rem;
-  transition: 1s ease-out transform;
+  /* transition: 1s ease-out transform; */
+  /* animation: slide-fade; */
 }
 .container {
   max-width: 40rem;
